@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import image05 from "../img/image05.webp";
+import { Container,StyledButton,StyledTitle } from "../style/sharedStyles";
 export default function Home(){
     return(
         <Container>
@@ -16,14 +17,7 @@ export default function Home(){
 
 
 
-const Container = styled.div`
-width: 100vw;
-height: 100vh;
-background-color: #6D7CE4;
-display: flex;
-flex-direction: column;
-align-items: center;
-`
+
 
 const ButtonDiv = styled.div`
 position: absolute;
@@ -46,26 +40,10 @@ height: 170px;
     }
 `
 
-const StyledButton = styled.button`
-margin-top: 29px;
-color: #FFFFFF;
-font-style: normal;
-border: none;
-font-weight: bold;
-font-size: 18px;
-width: 202px;
-height: 45px;
-background: #8C97EA;
-border-radius: 10px;
-`
 
 
-const StyledTitle = styled.h1`
-font-weight: 700;
-margin-top: 53px;
-font-size: 28px;
-color: #ffffff;
-`
+
+
 
 const StyledSubTitle = styled.h2`
 width: 341px;

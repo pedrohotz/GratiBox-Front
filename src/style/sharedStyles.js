@@ -15,6 +15,16 @@ overflow: scroll;
      align-items: center;
 
  }
+ .sub{
+     width: 341px;
+     height: 33px;
+     margin-top: 22px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-align: start;
+ }
     .login{
         margin-top: 43px;
         h2{
@@ -68,6 +78,62 @@ overflow: scroll;
             background: #8C97EA;
             border-radius: 10px;
             margin-bottom: 20px;
+        }
+    }
+
+    .card-sub{
+        width: 356px;
+        height: 382px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        img{
+            width: 349px;
+            height: 172px;
+            border-radius: 25px;
+        }
+        .info{
+            text-align: center;
+            display: flex;
+            margin-left: 19px;
+            h2{
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                color: #4D65A8
+            }
+            span{
+                font-weight: bold;
+                color: #E63C80;
+                font-size: 18px;
+                margin-left: 8px;
+            }
+        }
+        .data{
+            display: flex;
+            flex-direction: column;
+            margin-left: 19px;
+            span{
+                margin-left: 32px;
+                font-weight: bold;
+                color: #E63C80;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            h2{
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                color: #4D65A8
+            }
+        }
+        .rodape{
+            height: 78px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            span{
+                margin-bottom: 5px;
+            }
         }
     }
 `

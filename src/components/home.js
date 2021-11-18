@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import image05 from "../img/image05.webp";
-import { Container,StyledButton,StyledTitle } from "../style/sharedStyles";
+import { Container,StyledButton,StyledTitle,StyledSubTitle } from "../style/sharedStyles";
 export default function Home(){
     return(
         <Container>
@@ -45,13 +45,3 @@ height: 170px;
 
 
 
-const StyledSubTitle = styled.h2`
-width: 341px;
-margin-top: 44px;
-color: #FFFFFF;
-font-style: normal;
-font-weight: 300;
-font-size: 18px;
-line-height: 21px;
-text-align: center;
-`

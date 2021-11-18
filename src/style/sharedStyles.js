@@ -8,6 +8,7 @@ background-color: #6D7CE4;
 display: flex;
 flex-direction: column;
 align-items: center;
+overflow: scroll;
  form{
      display: flex;
      flex-direction: column;
@@ -30,6 +31,44 @@ align-items: center;
         font-weight: 700;
         font-size: 28px;
         color: #ffffff;
+    }
+
+    .card{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 358px;
+        height: 400px;
+        border-radius: 25px;
+        background-color: #E5CDB3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 354px;
+            height: 219px;
+            border-radius: 25px;
+        }
+        h1{
+            margin-top: 21px;
+            width: 320px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            color: #4D65A8;
+            text-align: start;
+        }
+        button{
+            border: none;
+            font-weight: 500;
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-top: 36px;
+            width: 168px;
+            height: 39px;
+            background: #8C97EA;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
     }
 `
 
@@ -81,10 +120,22 @@ margin-bottom: 8px;
     }
 `
 
+const StyledSubTitle = styled.h2`
+width: 341px;
+margin-top: 44px;
+color: #FFFFFF;
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+text-align: center;
+`
+
 export {
     Container,
     StyledButton,
     StyledTitle,
     StyledInput,
     StyledButtonLarge,
+    StyledSubTitle,
 }

@@ -4,6 +4,7 @@ import Home from "./components/home"
 import Login from "./components/login";
 import Register from "./components/register";
 import Subscription from "./components/subscription";
+import Sign from "./components/sign";
 export default function App(){
 
     return(
@@ -13,6 +14,7 @@ export default function App(){
                 <Route path="/sign-in" element={<Login/>} exact/>
                 <Route path="/sign-up" element={<Register/>} exact/>
                 <Route path="/subscription" element={<Subscription/>} exact/>
+                <Route path="/sign" element={<Sign/>} exact/>
             </Routes>
         </BrowserRouter>
     )

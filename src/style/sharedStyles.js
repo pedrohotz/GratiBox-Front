@@ -133,7 +133,103 @@ overflow: scroll;
             justify-content: space-around;
             span{
                 margin-bottom: 5px;
+                font-size: 18px;
+                line-height: 21px;
+                color: #E63C80;
             }
+        }
+    }
+
+    .dropdown{
+        margin-bottom: 7px;
+        position: relative;
+        width: 290px;
+        height: 44px;
+        select{
+            -moz-appearance:none ;
+            -webkit-appearance: none;
+            width: 290px;
+            height: 44px;
+            color: #4D65A8;
+            padding: 10px;
+            background: rgba(224, 209, 237, 0.62);
+            font-family: 'Roboto',sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        img{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .check-box{
+        width: 290px;
+        height: 111px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        background: rgba(224, 209, 237, 0.62);
+        border-radius: 5px;
+        .option{
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            margin-right: 50px;
+            margin-top: 5px;
+            input{
+                -webkit-appearance:none;
+                appearance: none;
+                height: 20px;
+                width: 20px;
+                background-color: #FFFFFF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            input:after{
+                font-family: "Font Awesome 5 free";
+                font-weight: 900;
+                font-size: 16px;
+                content: "\f00c";
+                color: #4D65A8;
+                display: none;
+            }
+            input:checked{
+                background-color: #8C97EA;
+            }
+            input:checked:after{
+                display: block;
+            }
+        }
+     
+        label{
+            font-size: 18px;
+            line-height: 21px;
+            color: #4D65A8;
+            margin-left: 1px;
+        }
+        form{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        h2{
+            padding-top: 3px;
+            padding-left: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            color: #4D65A8;
         }
     }
 `

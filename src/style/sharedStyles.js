@@ -82,6 +82,10 @@ overflow: scroll;
     }
 
     .card-sub{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 356px;
         height: 382px;
         background: #FFFFFF;
@@ -108,6 +112,27 @@ overflow: scroll;
                 margin-left: 8px;
             }
         }
+        .form-sign{
+            width: 290px;
+            height: 44px;
+            background: rgba(224, 209, 237, 0.62);
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 7px;
+            padding:10px;
+            ::placeholder{
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                color: #4D65A8;
+            }
+        }
+        .city{
+            display: flex;
+            width: 290px;
+            justify-content: space-between;
+        }
+
         .data{
             display: flex;
             flex-direction: column;
@@ -146,6 +171,7 @@ overflow: scroll;
         width: 290px;
         height: 44px;
         select{
+            z-index: 2;
             -moz-appearance:none ;
             -webkit-appearance: none;
             width: 290px;
@@ -163,6 +189,7 @@ overflow: scroll;
             cursor: pointer;
         }
         img{
+            z-index: 0;
             position: absolute;
             right: 10px;
             bottom: 10px;

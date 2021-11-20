@@ -83,6 +83,27 @@ export default function Sign(){
                 </form>
             </div>
             <StyledButton style={{marginBottom:"10px"}}>Próximo</StyledButton>
+
+            <div className="card-sub" style={{height:"429px"}}>
+                <img src={image03} alt="imgSignature3" ></img>       
+                <form>
+                    <input type="text" placeholder="Nome Completo" className="form-sign" required></input>
+                    <input type="text" placeholder="Endereço de entrega" className="form-sign" required></input>
+                    <input type="text" placeholder="CEP" className="form-sign" required></input>
+                    <div className="city">
+                    <input type="text" placeholder="Cidade" style={{width:"168px"}} className="form-sign" required></input>
+                    <div className="dropdown" style={{width:"108px"}}>
+                        <img src={arrow} alt="icon"></img>
+                        <select name="planos"  style={{width:"108px"}} required>
+                            <option>Estado</option>
+                            <option>Minas Gerais</option>
+                            <option>Amazonas</option>
+                            <option>São Paulo</option>
+                        </select>
+                    </div>
+                    </div>
+                </form>
+            </div>
     </Container>
     )
 }

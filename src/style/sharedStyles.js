@@ -85,7 +85,6 @@ overflow: scroll;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         width: 356px;
         height: 382px;
         background: #FFFFFF;

@@ -1,5 +1,5 @@
 
-import { Container,StyledSubTitle, StyledButton} from "../style/sharedStyles";
+import { Container,StyledSubTitle, StyledButton, StyledSpan} from "../style/sharedStyles";
 import image04 from "../img/image04.jpg";
 import image02 from "../img/image02.jpg";
 import image03 from "../img/image03.jpg";
@@ -13,6 +13,7 @@ import { useState } from "react/cjs/react.development";
 export default function Subscription(){
     const {user} = useContext(UserContext);
     const [signature,setSignature] = useState({});
+    const [selectCha, setSelectCha] = useState(false);
     let navigate = useNavigate();
     useEffect(() => {
         if(!user){
@@ -26,7 +27,14 @@ export default function Subscription(){
         // eslint-disable-next-line
     },[user])
     
-
+    function checkPlan(idPlan){
+        if(idPlan === 1){
+            return ('Plano Mensal')
+        }
+        else {
+            return ('Plano Semanal')
+        }
+    }
 
     return(
         <Container>
@@ -35,11 +43,11 @@ export default function Subscription(){
                     <img src={image03} alt="imgSignature3" ></img>
                     <div className="info">
                         <h2>Plano:</h2>
-                        <span>@tipo_de_plano</span>
+                        <span>{checkPlan(signature.plan_id)}</span>
                     </div>
                     <div className="info">
                         <h2>Data de assinatura:</h2>
-                        <span>dd/mm/aa</span>
+                        <span>{signature.sign_date}</span>
                     </div>
                     <div className="data">
                         <h2>Próximas entregas:</h2>
@@ -48,9 +56,9 @@ export default function Subscription(){
                         <span>dd/mm/aa</span>
                     </div>
                     <div className="rodape">
-                        <span>Chás</span>
-                        <span>Produtos Orgânicos</span>
-                        <span>Incensos</span>
+                        <StyledSpan selected={} >Chás</StyledSpan>
+                        <StyledSpan>Produto Orgânicos</StyledSpan>
+                        <StyledSpan>Incensos</StyledSpan>
                     </div>
                 </div>
                 <StyledButton>Avaliar entregas</StyledButton></> : <> <h1 className="title">Bom te ver por aqui, {user?.name}</h1>
@@ -71,3 +79,4 @@ export default function Subscription(){
         </Container>
     )
 }
+

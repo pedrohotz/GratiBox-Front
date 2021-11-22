@@ -24,8 +24,15 @@ function getSignature(token){
     return axios.get(`${URL}/signature`, config);
 }
 
+function postSignature(body,token){
+    const config = createHeaders(token);
+    console.log(config);
+    return axios.post(`${URL}/signature`,body,config);
+}
+
 export {
     postRegister,
     postLogin,
     getSignature,
+    postSignature,
 }

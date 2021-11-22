@@ -66,10 +66,10 @@ export default function Register(){
         <Container>
             <h1 className="title">Bem vindo ao GratiBox</h1>
             <form className="login" onSubmit={registerSubmit}>
-                <StyledInput placeholder="Nome" type="text" value={name} onChange={(e) => setName(e.target.value)} ></StyledInput>
-                <StyledInput placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)}></StyledInput>
-                <StyledInput placeholder="Senha" type="password" value={password} onChange={(e) => setPassword(e.target.value)}></StyledInput>
-                <StyledInput placeholder="Confirmar senha" type="password" value={cPassword} onChange={(e) => setcPassword(e.target.value)}></StyledInput>
+                <StyledInput placeholder="Nome" type="text" value={name} onChange={(e) => setName(e.target.value)} required ></StyledInput>
+                <StyledInput placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required></StyledInput>
+                <StyledInput placeholder="Senha" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required></StyledInput>
+                <StyledInput placeholder="Confirmar senha" type="password" value={cPassword} onChange={(e) => setcPassword(e.target.value)} required></StyledInput>
                 <StyledButtonLarge style={{marginTop:"62px"}} type="submit">Cadastrar</StyledButtonLarge>
                 <h2 onClick={()=> navigate('/sign-in')}>Já sou grato</h2>
             </form>

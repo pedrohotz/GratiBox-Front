@@ -1,15 +1,17 @@
+import { useNavigate } from "react-router";
 import styled from "styled-components"
 import image05 from "../img/image05.webp";
 import { Container,StyledButton,StyledTitle,StyledSubTitle } from "../style/sharedStyles";
 export default function Home(){
+    let navigate = useNavigate();
     return(
         <Container>
             <StyledTitle>Bem vindo ao GratiBox</StyledTitle>
             <StyledSubTitle>Receba em casa um box com chás, produtos organicos, incensos e muito mais...</StyledSubTitle>
             <img src={image05} width="386" height="380" style={{zIndex:"0"}} alt="homeImage"></img>
             <ButtonDiv>
-                <StyledButton>Quero começar</StyledButton>
-                <h1>Já sou grato</h1>
+                <StyledButton onClick={()=>navigate('/sign-up')} >Quero começar</StyledButton>
+                <h1 onClick={()=>navigate('/sign-in')}>Já sou grato</h1>
             </ButtonDiv>
         </Container>
     )

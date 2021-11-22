@@ -50,7 +50,6 @@ export default function Register(){
             email,
             password
         }
-        console.log(body);
         postRegister(body).then(()=> {
             Swal.fire({
                 icon: "success",
@@ -59,7 +58,22 @@ export default function Register(){
             setTimeout(()=>{
                 navigate('/sign-in')
             },1000);
-        }).catch((error)=>{console.log(error.status)});
+        }).catch((error)=>{
+            if(error.response.status === 409){
+                Swal.fire({
+                    icon: "error",
+                    title: "ops",
+                    text: "Email ja cadastrado"
+                }) 
+            }
+            else{
+                Swal.fire({
+                    icon: "error",
+                    title: "ops",
+                    text: "Falha ao fazer registro tente novamente"
+                })
+            }
+        });
     }
 
     return(

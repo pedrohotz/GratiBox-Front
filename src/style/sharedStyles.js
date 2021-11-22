@@ -184,12 +184,6 @@ overflow: scroll;
             display: flex;
             align-items: flex-end;
             justify-content: space-around;
-            span{
-                margin-bottom: 5px;
-                font-size: 18px;
-                line-height: 21px;
-                color: #E63C80;
-            }
         }
     }
 
@@ -273,7 +267,7 @@ overflow: scroll;
             color: #4D65A8;
             margin-left: 1px;
         }
-        form{
+        .form{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -351,7 +345,7 @@ const StyledSpan = styled.span`
     margin-bottom: 5px;
     font-size: 18px;
     line-height: 21px;
-    color: #E63C80;
+    color: ${props => props.selected ? "#E63C80" : "#E5E5E5"}
 `
 
 export {

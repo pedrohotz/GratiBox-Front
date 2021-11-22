@@ -35,6 +35,17 @@ export default function Sign(){
         }
          // eslint-disable-next-line
     },[plans]);
+    useEffect(() => {
+        if(!user){
+            Swal.fire({
+                icon: "error",
+                title: "ops",
+                text: "Você não está logado faça login para continuar.."
+            })
+            navigate('/');
+        }
+        // eslint-disable-next-line
+    },[user]);
        
     useEffect(() =>{
         if(cepValue.length === 8){
@@ -78,7 +89,6 @@ export default function Sign(){
             products.push('Produtos Orgânicos');
            setProducts([...products]);
         }
-        console.log(products);
         if(!plans || !day || products.length === 0){
             Swal.fire({
                 icon: "error",
@@ -112,6 +122,7 @@ export default function Sign(){
             planId: planType,
             products,
             signDate: dayjs().format('DD/MM/YY'),
+            deliveryDay: day,
             fullName: name,
             adress,
             cep: cepValue,
@@ -136,7 +147,7 @@ export default function Sign(){
 
     return(
         <Container>
-        <h1 className="title">Bom te ver por aqui, @user</h1>
+        <h1 className="title">Bom te ver por aqui, {user?.name}</h1>
         <h2 className="sub">“Agradecer é arte de atrair coisas boas”</h2>
         {next ? <>
             <div className="card-sub" style={{height:"429px"}}>
@@ -181,23 +192,23 @@ export default function Sign(){
                     </div>
                     <div className="check-box">
                         <h2>Quero receber</h2>
-                        <form>
+                        <div className="form">
                             <div className="option">
                                 <input type="checkbox" className="check" onChange={e => setChas(e.target.checked)}></input>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 <label>Chás</label>
                             </div>
                             <div className="option">
                                 <input type="checkbox" className="check" onChange={e => setInce(e.target.checked)}></input>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 <label>Incensos</label>
                             </div>
                             <div className="option">
                                 <input type="checkbox" className="check" onChange={e => setProdOrg(e.target.checked)}></input>
-                                <span class="checkmark"></span>
+                                <span className="checkmark"></span>
                                 <label>Produtos orgânicos</label>
                             </div>
-                        </form>
+                        </div>                 
                     </div>
                 </form>
             </div>

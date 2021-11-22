@@ -1,9 +1,20 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router";
 import styled from "styled-components"
+import UserContext from "../context/usercontext";
 import image05 from "../img/image05.webp";
 import { Container,StyledButton,StyledTitle,StyledSubTitle } from "../style/sharedStyles";
+import { useEffect } from "react";
 export default function Home(){
     let navigate = useNavigate();
+    const {user} = useContext(UserContext);
+    useEffect(() =>{
+        if(user){
+            navigate('/subscription')
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[user]);
+   
     return(
         <Container>
             <StyledTitle>Bem vindo ao GratiBox</StyledTitle>

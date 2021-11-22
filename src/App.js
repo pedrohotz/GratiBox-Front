@@ -8,8 +8,8 @@ import Sign from "./components/sign";
 import UserContext from "./context/usercontext";
 import { useState } from 'react';
 export default function App(){
-    const [user,setUser] = useState();
-    console.log(user);
+    const userLogged = JSON.parse(localStorage.getItem('@user'));
+    const [user,setUser] = useState(userLogged);
 
     return(
         <BrowserRouter>

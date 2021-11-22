@@ -26,7 +26,6 @@ function getSignature(token){
 
 function postSignature(body,token){
     const config = createHeaders(token);
-    console.log(config);
     return axios.post(`${URL}/signature`,body,config);
 }
 

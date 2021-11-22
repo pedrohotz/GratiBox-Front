@@ -94,6 +94,13 @@ overflow: scroll;
             height: 172px;
             border-radius: 25px;
         }
+        h3{
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            text-align: center;
+            color: #4D65A8;
+        }
         .info{
             text-align: center;
             display: flex;
@@ -119,6 +126,28 @@ overflow: scroll;
             border: none;
             margin-bottom: 7px;
             padding:10px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            color: #4D65A8;
+            ::placeholder{
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                color: #4D65A8;
+            }
+        }
+        .form-sign-state{
+            width: 108px;
+            height: 44px;
+            background: rgba(224, 209, 237, 0.62);
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            color: #4D65A8;
+            border: none;
+            padding: 10px;
             ::placeholder{
                 font-weight: bold;
                 font-size: 18px;
@@ -318,6 +347,12 @@ font-size: 18px;
 line-height: 21px;
 text-align: center;
 `
+const StyledSpan = styled.span`
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #E63C80;
+`
 
 export {
     Container,
@@ -326,4 +361,5 @@ export {
     StyledInput,
     StyledButtonLarge,
     StyledSubTitle,
+    StyledSpan,
 }
